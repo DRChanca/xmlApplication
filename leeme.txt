@@ -1,0 +1,120 @@
+XML como modelo para construir sitios Web
+
+Descripción
+-----------
+Esta aplicación genera un portfolio web estático a partir de un documento XML.
+Incluye un formulario local para validar el XML y crear el sitio resultante.
+El portfolio puede incluir una página principal, información personal,
+contacto, recomendaciones multimedia y proyectos.
+
+Arquitectura
+------------
+
+Formulario web → validador Rust/WebAssembly → servidor Node.js → generador TypeScript → web estática
+
+1. El formulario carga un archivo XML.
+2. El servidor valida su estructura básica con un módulo Rust compilado a
+   WebAssembly y comprueba que el XML esté bien formado.
+3. Si es válido, guarda el documento en `creados/`.
+4. El generador TypeScript lee el XML de la carpeta creados, copia la plantilla y crea las páginas HTML
+   en `generado/<nombre-del-xml>/`.
+
+Tecnologías y justificación de su elección
+------------------------------------------
+- TypeScript: implementa el generador con tipos que facilitan tratar las
+  secciones, recursos y atributos del XML de manera segura.
+- Node.js: ofrece un servidor local sencillo y permite ejecutar el generador y
+  gestionar archivos sin añadir un backend complejo.
+- Rust y WebAssembly: se usan para una validación inicial eficiente en el
+  servidor y para demostrar la integración de WASM en la aplicación web.
+- HTML5, CSS3 y JavaScript: forman la plantilla estática que se copia a cada
+  portfolio generado.
+- fast-xml-parser: analiza el XML y comprueba que está bien formado antes de
+  generar el resultado.
+
+Estructura del proyecto
+-----------------------
+- `formulario/`: interfaz web para cargar, validar y generar un portfolio.
+  - `index.html`: estructura del formulario.
+  - `form.css`: estilos del formulario.
+  - `form.js`: llamadas a las API de validación y generación.
+- `src/generate.ts`: generador principal; transforma el XML en los documentos
+  HTML de cada sección.
+- `server.js`: servidor HTTP. Expone `GET /api/health`, `POST /api/validate` y
+  `POST /api/generate`; sirve el formulario y las webs generadas.
+- `wasm-validator/`: proyecto Rust que crea el validador WebAssembly.
+- `modelo/`: plantilla y recursos que se copian al resultado.
+  - Páginas de referencia, `main.css`, `main.js`, `logo.svg` y `public/`.
+- `portfolio-modelo.xml`: XML completo que representa el portfolio de la
+  carpeta `modelo/` y sirve de ejemplo de entrada.
+- `creados/`: XML aceptados y guardados por el servidor.
+- `generado/`: portfolios HTML creados por el generador.
+- `package.json`: dependencias y scripts del proyecto.
+
+Formato del XML
+---------------
+El elemento raíz es `<web>`. Incluye una o más etiquetas `<pagina>` y una sección
+`<principal>` obligatoria. Las secciones `<sobremi>`, `<contacto>`,
+`<multimedia>` y `<proyectos>` son opcionales. La navegación también es opcional.
+
+
+Instalación y ejecución local
+-----------------------------
+Requisitos: Node.js, npm y Rust con el destino `wasm32-unknown-unknown`.
+
+Desde la carpeta `xmlApplication`:
+
+```powershell
+rustup target add wasm32-unknown-unknown
+npm.cmd install
+npm.cmd run build:wasm
+npm.cmd run serve
+```
+
+Después se abre `http://127.0.0.1:3000` en el navegador. El formulario permite
+validar primero el XML y, posteriormente, generar el portfolio. El endpoint
+`/api/health` permite comprobar si el módulo WebAssembly está disponible.
+
+También puede generarse una web desde la terminal:
+
+```powershell
+npm.cmd run generate -- portfolio-modelo.xml .\salida\mi-portfolio
+```
+
+La carpeta de salida no debe existir previamente; el generador no la sobrescribe.
+
+Software, herramientas y versiones utilizadas
+----------------------------------------------
+- Node.js y npm.
+- TypeScript 5.8.3.
+- fast-xml-parser 5.2.5.
+- Rust con el destino `wasm32-unknown-unknown`.
+- @types/node 24.0.0.
+- Prettier 3.9.9.
+- HTML5, CSS3, JavaScript y WebAssembly.
+- Visual Studio Code, como editor de código, y un navegador moderno para las
+  pruebas manuales.
+
+Comandos disponibles
+--------------------
+- `npm.cmd run build`: compila TypeScript en `dist/`.
+- `npm.cmd run build:wasm`: compila el validador Rust a WebAssembly.
+- `npm.cmd run serve`: compila TypeScript e inicia el creador visual local.
+- `npm.cmd run generate -- archivo.xml`: crea una web desde un XML.
+
+Explicaciones y consideraciones específicas
+--------------------------------------------
+- La validación WebAssembly exige `<web>`, al menos una `<pagina>`, una sección
+  `<principal>` y los atributos obligatorios de fotos, audios y vídeos.
+- La comprobación adicional de `fast-xml-parser` evita generar contenido desde
+  documentos XML mal formados.
+- El servidor acepta únicamente subidas `multipart/form-data`, limita el XML a
+  2 MB y restringe los nombres de salida a letras, números, guiones y guiones
+  bajos.
+- Las páginas generadas escapan el contenido XML antes de insertarlo en HTML,
+  reduciendo el riesgo de inyección de etiquetas.
+- Solo se generan las páginas cuyas secciones se hayan declarado en el XML.
+- Los recursos de `modelo/` se copian completos al resultado para que la web
+  generada sea autónoma y pueda desplegarse como sitio estático.
+- Se si quiere introducir algun contenido multimedia se deberá introducir en la 
+carpeta modelo/public

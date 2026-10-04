@@ -10,13 +10,13 @@
       <enlace-nav seccion="principal" titulo="Inicio"/>
       <enlace-nav seccion="sobremi" titulo="Sobre mí"/>
       <enlace-nav seccion="contacto" titulo="Contacto"/>
-      <enlace-nav seccion="multimedia" titulo="Recomendaciones"/>
+      <enlace-nav seccion="multimedia" titulo="Multimedia recomendado"/>
       <enlace-nav seccion="proyectos" titulo="Proyectos"/>
     </navegacion>
     <principal>
       <foto src-name="public/IMG_9.jpeg" alt="Foto de perfil de David Rodríguez Chanca" piefoto="David Rodríguez Chanca"/>
-      <titulo>Hola, soy Paco</titulo>
-      <texto>Soy David Rodríguez Chanca, estudiante del Grado en Ingeniería Informática del Software y del Máster en Ingeniería Web de la Universidad de Oviedo. Me interesan la orquestación de agentes, el desarrollo backend, la infraestructura y la ciberseguridad.</texto>
+      <titulo>Hola, soy David</titulo>
+      <texto>Soy David Rodríguez Chanca, estudiante del grado en Ingeniería Informática del Software y del Máster en Ingeniería Web de la Universidad de Oviedo. Me interesan la orquestación de agentes, el desarrollo backend, la infraestructura y la ciberseguridad.</texto>
       <boton onAction="https://github.com/DRChanca">Mi GitHub</boton>
       <boton onAction="https://www.linkedin.com/in/david-rodr%C3%ADguez-chanca-3a2834141/">Mi LinkedIn</boton>
       <tecnologia><foto src-name="public/java.png" alt="Java" piefoto="Java"/><texto>Java</texto></tecnologia>
@@ -38,10 +38,11 @@
     <sobremi>
       <titulo>Sobre mí</titulo>
       <parrafo>
+        <texto>Un poco más sobre mi trayectoria y mis intereses.</texto>
         <subtitulo>Formación y enfoque actual</subtitulo>
-        <texto>Estudio el Grado en Ingeniería Informática del Software y curso el Máster en Ingeniería Web en la Universidad de Oviedo. Compagino la formación con proyectos de desarrollo backend, aplicaciones web e infraestructura, con especial interés por la ciberseguridad.</texto>
+        <texto>Estudio el grado en Ingeniería Informática del Software y curso el Máster en Ingeniería Web en la Universidad de Oviedo. Compagino la formación con proyectos de desarrollo backend, aplicaciones web e infraestructura, con especial interés por la ciberseguridad.</texto>
         <subtitulo>Cómo empezó todo</subtitulo>
-        <texto>Mi entusiasmo por la informática comenzó cuando tenía 14 años. Lo que empezó como una simple curiosidad se convirtió rápidamente en una pasión.</texto>
+        <texto>Mi entusiasmo por la informática no es reciente; comenzó cuando tenía 14 años. Lo que empezó como una simple curiosidad se convirtió rápidamente en una pasión.</texto>
         <texto>En clase de Historia decidí programar un pequeño juego interactivo: un RPG ambientado en el descubrimiento de América, donde las decisiones afectaban al destino del Imperio.</texto>
         <texto>Hoy sigo aprendiendo a diseñar aplicaciones y servicios web, desde las API y las bases de datos hasta su despliegue y protección. Me interesan especialmente el desarrollo backend y la ciberseguridad.</texto>
       </parrafo>
@@ -49,12 +50,12 @@
         <parrafo>
           <subtitulo>Mis aficiones</subtitulo>
           <texto>Fuera del mundo digital, encuentro mi equilibrio en la naturaleza. Soy un gran entusiasta de la escalada y el senderismo; me gusta desconectar, afrontar un reto físico y disfrutar de las vistas.</texto>
-          <texto>Aquí comparto algunos de esos momentos.</texto>
+          <texto>Aquí comparto algunos de esos momentos:</texto>
         </parrafo>
         <carrusel>
           <foto src-name="public/camino_santiago.jpeg" alt="Una etapa del Camino de Santiago" piefoto="Una etapa del Camino de Santiago"/>
           <foto src-name="public/escalada_manzaneda.jpeg" alt="Escalando en Manzaneda" piefoto="Escalando en Manzaneda"/>
-          <foto src-name="public/los_albos.jpeg" alt="Paisaje de Los Albos" piefoto="Paisaje de Los Albos"/>
+          <foto src-name="public/los_albos.jpeg" alt="Paisaje de Los Albos" piefoto="Paisaje de los Albos"/>
           <foto src-name="public/teide.jpeg" alt="Visita al Parque Nacional del Teide" piefoto="Visita al Parque Nacional del Teide"/>
           <foto src-name="public/ruta_de_las_xanas.JPG" alt="Ruta de las Xanas" piefoto="En la ruta de las Xanas"/>
           <foto src-name="public/albo.jpeg" alt="Ruta por el Albo Oriental" piefoto="Ruta por el Albo Oriental"/>
@@ -63,48 +64,22 @@
     </sobremi>
     <contacto>
       <email>davidrch03@gmail.com</email>
-      <enlace>https://github.com/DRChanca</enlace>
-      <enlace>https://www.linkedin.com/in/david-rodr%C3%ADguez-chanca-3a2834141/</enlace>
     </contacto>
     <multimedia>
-      <titulo>Multimedia recomendado</titulo>
-      <texto>Esta es la sección donde David comparte sus recomendaciones de la semana.</texto>
-      <serie>
-        <subtitulo>Serie recomendada</subtitulo>
-        <video src-name="public/videos/videoplayback.mp4"/>
-      </serie>
-      <pelicula>
-        <subtitulo>Cadena perpetua</subtitulo>
-        <foto src-name="public/gif/The-Shawshank-Redemption-4.gif" alt="Escena de Cadena perpetua" piefoto="La nota es de 10/10"/>
-      </pelicula>
-      <pelicula>
-        <subtitulo>El padrino</subtitulo>
-        <foto src-name="public/gif/padrino.gif" alt="Escena de El padrino" piefoto="La nota es de 10/10"/>
-      </pelicula>
-      <pelicula>
-        <subtitulo>El caballero oscuro</subtitulo>
-        <foto src-name="public/gif/barman.gif" alt="Escena de El caballero oscuro" piefoto="La nota es de 9/10"/>
-      </pelicula>
-      <podcast>
-        <subtitulo>Roca Project</subtitulo>
-        <foto src-name="public/rocaProject.jpeg" alt="Logo del podcast Roca Project" piefoto="Roca Project"/>
-        <audio src-name="public/audio/rocaPod.mp3"/>
-      </podcast>
-      <podcast>
-        <subtitulo>Roma Aeterna</subtitulo>
-        <foto src-name="public/romAeterna.jpg" alt="Logo del podcast Roma Aeterna" piefoto="Roma Aeterna"/>
-        <audio src-name="public/audio/romaPod.mp3"/>
-      </podcast>
-      <podcast>
-        <subtitulo>Criminopatía</subtitulo>
-        <foto src-name="public/criminopatia.jpeg" alt="Logo del podcast Criminopatía" piefoto="Criminopatía"/>
-        <audio src-name="public/audio/crimepod.mp3"/>
-      </podcast>
+      <titulo>¿Qué es el contenido multimedia recomendado?</titulo>
+      <texto>El contenido multimedia recomendado es la sección de la web donde David comparte las recomendaciones de la semana.</texto>
+      <serie><subtitulo>Serie</subtitulo><video src-name="public/videos/videoplayback.mp4"/></serie>
+      <pelicula><subtitulo>Cadena perpetua</subtitulo><foto src-name="public/gif/The-Shawshank-Redemption-4.gif" alt="Escena de cadena perpetua" piefoto="La puntuación es de 10/10"/></pelicula>
+      <pelicula><subtitulo>El padrino</subtitulo><foto src-name="public/gif/padrino.gif" alt="Escena de El padrino" piefoto="La puntuación es de 10/10"/></pelicula>
+      <pelicula><subtitulo>El caballero oscuro</subtitulo><foto src-name="public/gif/barman.gif" alt="Escena de El caballero oscuro" piefoto="La puntuación es de 9/10"/></pelicula>
+      <podcast><subtitulo>Roca Project</subtitulo><foto src-name="public/rocaProject.jpeg" alt="Logo del podcast Roca Project" piefoto="Roca Project"/><audio src-name="public/audio/rocaPod.mp3"/></podcast>
+      <podcast><subtitulo>Roma Aeterna</subtitulo><foto src-name="public/romAeterna.jpg" alt="Logo del podcast Roma Aeterna" piefoto="Roma Aeterna"/><audio src-name="public/audio/romaPod.mp3"/></podcast>
+      <podcast><subtitulo>Criminopatía</subtitulo><foto src-name="public/criminopatia.jpeg" alt="Logo del podcast Criminopatía" piefoto="Criminopatía"/><audio src-name="public/audio/crimepod.mp3"/></podcast>
     </multimedia>
     <proyectos>
       <titulo>Mis proyectos y logros</titulo>
       <proyecto><subtitulo>Ganador del II Hackathon en Agentes Inteligentes y Grandes Modelos de Lenguaje</subtitulo><texto>Desarrollé en equipo un agente para optimizar la colocación de elementos sobre un mapa. Combinamos Google Gemini 2.5 Flash, LlamaIndex Workflow, heurísticas y verificación mediante búsqueda en anchura (BFS). El hackathon fue organizado por la Escuela de Ingeniería Informática de la Universidad de Oviedo, con el patrocinio de la Cátedra TotalEnergies de Analítica de Datos e IA.</texto></proyecto>
-      <proyecto><subtitulo>API de gestión clínica · en desarrollo</subtitulo><texto>Trabajo en una API REST con Spring Boot, PostgreSQL y Flyway, acompañada de un frontend en React y TypeScript. Incluye gestión de pacientes y el diseño del inventario por clínicas, lotes, movimientos de stock y consumos asociados a tratamientos.</texto></proyecto>
+      <proyecto><subtitulo>API de gestión clínica · en desarrollo</subtitulo><texto>Trabajo en una API REST con Spring Boot, PostgreSQL y Flyway, acompañada de un frontend en React y TypeScript. El proyecto incluye gestión de pacientes y el diseño del inventario por clínicas, lotes, movimientos de stock y consumos asociados a tratamientos.</texto></proyecto>
       <proyecto><subtitulo>Sistema de gestión de talleres</subtitulo><texto>Sistema de gestión de talleres mecánicos desarrollado con Spring. Utilizamos Selenium para las pruebas.</texto><boton onAction="https://github.com/Aitorsiius/sdi2425-entrega2-63">Ver en GitHub</boton></proyecto>
       <proyecto><subtitulo>¿Quién quiere ser millonario? con IA</subtitulo><texto>Aplicación basada en microservicios con ayudas para responder preguntas mediante Gemini. El juego estuvo disponible en la web durante 2024.</texto><boton onAction="https://github.com/Arquisoft/wichat_es6b">Ver en GitHub</boton></proyecto>
       <proyecto><subtitulo>Compilador</subtitulo><texto>Compilador basado en ANTLR que transforma código similar a Pascal en instrucciones ejecutables por una máquina virtual educativa.</texto><boton onAction="https://github.com/DRChanca/DLP">Ver en GitHub</boton></proyecto>
