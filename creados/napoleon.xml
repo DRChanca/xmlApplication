@@ -8,10 +8,7 @@
   <pagina nombre="Francia y Napoleón">
     <navegacion>
       <enlace-nav seccion="principal" titulo="Inicio"/>
-      <enlace-nav seccion="sobremi" titulo="Napoleón"/>
-      <enlace-nav seccion="contacto" titulo="Contacto"/>
       <enlace-nav seccion="multimedia" titulo="Multimedia"/>
-      <enlace-nav seccion="proyectos" titulo="Historia"/>
     </navegacion>
 
     <principal>
@@ -22,31 +19,6 @@
       <tecnologia><foto src-name="public/banderaFrancia.jpg" alt="Bandera de Francia" piefoto="La bandera francesa"/><texto>Historia de Francia</texto></tecnologia>
       <tecnologia><foto src-name="public/napoleon.jpg" alt="Retrato de Napoleón Bonaparte" piefoto="Napoleón Bonaparte"/><texto>Época napoleónica</texto></tecnologia>
     </principal>
-
-    <sobremi>
-      <titulo>Napoleón Bonaparte</titulo>
-      <parrafo>
-        <subtitulo>Una figura decisiva</subtitulo>
-        <texto>Napoleón Bonaparte fue una de las personalidades más influyentes de la historia francesa y europea entre finales del siglo XVIII y comienzos del XIX.</texto>
-        <subtitulo>Un legado histórico</subtitulo>
-        <texto>Su trayectoria política y militar dejó una huella duradera en la organización de Francia y en la historia del continente europeo.</texto>
-      </parrafo>
-      <aficiones>
-        <parrafo>
-          <subtitulo>Símbolos de Francia</subtitulo>
-          <texto>La imagen de Napoleón y la bandera tricolor ayudan a situar este recorrido histórico y cultural.</texto>
-        </parrafo>
-        <carrusel>
-          <foto src-name="public/napoleon.jpg" alt="Retrato de Napoleón Bonaparte" piefoto="Napoleón Bonaparte"/>
-          <foto src-name="public/banderaFrancia.jpg" alt="Bandera de Francia" piefoto="Bandera tricolor francesa"/>
-        </carrusel>
-      </aficiones>
-    </sobremi>
-
-    <contacto>
-      <email>historia-francia@example.com</email>
-      <enlace>https://www.alliancefr.org/</enlace>
-    </contacto>
 
     <multimedia>
       <titulo>Francia en imágenes y sonido</titulo>
@@ -67,18 +39,5 @@
       </podcast>
     </multimedia>
 
-    <proyectos>
-      <titulo>Propuestas para seguir aprendiendo</titulo>
-      <proyecto>
-        <subtitulo>Línea del tiempo de Francia</subtitulo>
-        <texto>Una actividad para ordenar acontecimientos clave de la Revolución Francesa, el Consulado y el Imperio napoleónico.</texto>
-        <boton onAction="https://www.alliancefr.org/">Explorar cultura francesa</boton>
-      </proyecto>
-      <proyecto>
-        <subtitulo>Vocabulario histórico en francés</subtitulo>
-        <texto>Una selección de términos básicos para relacionar el aprendizaje del idioma con la historia y la cultura.</texto>
-        <boton onAction="https://www.alliancefr.org/">Aprender francés</boton>
-      </proyecto>
-    </proyectos>
   </pagina>
 </web>

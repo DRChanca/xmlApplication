@@ -132,6 +132,15 @@ function renderIndex(
       return `<article class="skill-item"><img src="${escapeHtml(icon.src)}" alt="${escapeHtml(icon.alt)}"><h6>${escapeHtml(text(technology.texto))}</h6></article>`;
     })
     .join("\n        ");
+  const skillsSection = skills
+    ? `<main class="skills-section">
+    <h1>¿Con qué he trabajado?</h1>
+    <section>
+      <h3>Estas son algunas de las tecnologías con las que he trabajado:</h3>
+      ${skills}
+    </section>
+  </main>`
+    : "";
 
   const body = `<header>
     <img src="${escapeHtml(profile.src)}" alt="${escapeHtml(profile.alt)}">
@@ -140,18 +149,12 @@ function renderIndex(
     <hr>
     <aside>${buttons}</aside>
   </header>
-  <main>
-    <h1>¿Con qué he trabajado?</h1>
-    <section>
-      <h3>Estas son algunas de las tecnologías con las que he trabajado:</h3>
-      ${skills}
-    </section>
-  </main>`;
+  ${skillsSection}`;
   return pageShell(
     `${siteTitle} - Inicio`,
     "index.html",
     body,
-    false,
+    true,
     navigation,
   );
 }

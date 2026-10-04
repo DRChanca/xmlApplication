@@ -1,1 +1,1 @@
-C:\inetpub\wwwroot\CuartoTrabajo\wasm-validator\target\wasm32-unknown-unknown\release\xml_validator.wasm: C:\inetpub\wwwroot\CuartoTrabajo\wasm-validator\src\lib.rs
+C:\Users\Usuario\Desktop\Master\ECW\ -\ Estandares\ y\ computación\ web\xmlApplication\wasm-validator\target\wasm32-unknown-unknown\release\xml_validator.wasm: C:\Users\Usuario\Desktop\Master\ECW\ -\ Estandares\ y\ computación\ web\xmlApplication\wasm-validator\src\lib.rs

@@ -3,83 +3,38 @@
 <web xmlns="http://tempuri.org/web"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://tempuri.org/web web.xsd"
-     titulo="Alliance Française">
+     titulo="Alliance Française · Aprender francés">
   <foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="Alliance Française"/>
   <pagina nombre="Alliance Française">
     <navegacion>
       <enlace-nav seccion="principal" titulo="Inicio"/>
-      <enlace-nav seccion="sobremi" titulo="La Alianza"/>
-      <enlace-nav seccion="contacto" titulo="Contacto"/>
-      <enlace-nav seccion="multimedia" titulo="Aprende francés"/>
-      <enlace-nav seccion="proyectos" titulo="Actividades"/>
+      <enlace-nav seccion="multimedia" titulo="Aula y cultura"/>
     </navegacion>
 
     <principal>
       <foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="Alliance Française"/>
-      <titulo>Aprende francés, vive la cultura</titulo>
-      <texto>La Alliance Française es un espacio para aprender francés, descubrir la cultura francófona y conectar con personas que comparten la curiosidad por el idioma.</texto>
-      <boton onAction="https://www.alliancefr.org/">Conoce Alliance Française</boton>
-      <tecnologia><foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="Alliance Française"/><texto>Cursos de francés</texto></tecnologia>
-      <tecnologia><foto src-name="public/React-icon.svg.png" alt="Icono de una experiencia digital" piefoto="Experiencia digital"/><texto>Recursos en línea</texto></tecnologia>
-      <tecnologia><foto src-name="public/romAeterna.jpg" alt="Imagen representativa de cultura" piefoto="Cultura francófona"/><texto>Cultura y comunidad</texto></tecnologia>
+      <titulo>El francés abre conversaciones</titulo>
+      <texto>Una propuesta para aprender francés de forma práctica y acercarse a las culturas francófonas. Cada clase es una oportunidad para escuchar, hablar, descubrir y compartir nuevas perspectivas.</texto>
+      <boton onAction="https://www.alliancefr.org/">Descubrir Alliance Française</boton>
     </principal>
 
-    <sobremi>
-      <titulo>Un lugar para acercarse al francés</titulo>
-      <parrafo>
-        <subtitulo>Idioma, cultura y encuentros</subtitulo>
-        <texto>Ofrecemos un entorno cercano para avanzar en francés desde los primeros pasos hasta niveles más avanzados.</texto>
-        <subtitulo>Aprender haciendo</subtitulo>
-        <texto>Las clases combinan comunicación, comprensión oral, lectura y situaciones cotidianas para que el idioma se use con confianza.</texto>
-      </parrafo>
-      <aficiones>
-        <parrafo>
-          <subtitulo>También compartimos cultura</subtitulo>
-          <texto>Proyecciones, clubes de conversación y actividades culturales completan el aprendizaje dentro y fuera del aula.</texto>
-        </parrafo>
-        <carrusel>
-          <foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="Una comunidad para aprender francés"/>
-          <foto src-name="public/lagos.jpeg" alt="Paisaje para una actividad cultural" piefoto="Aprender también es descubrir"/>
-        </carrusel>
-      </aficiones>
-    </sobremi>
-
-    <contacto>
-      <email>contacto@alliance-francaise.example</email>
-      <enlace>https://www.alliancefr.org/</enlace>
-    </contacto>
-
     <multimedia>
-      <titulo>Aprende francés con nosotros</titulo>
-      <texto>Una muestra audiovisual para practicar la escucha y descubrir cómo es una clase de francés.</texto>
+      <titulo>Aula y cultura francófona</titulo>
+      <texto>El idioma se aprende usándolo: escuchando voces reales, reconociendo expresiones cotidianas y conectando cada palabra con su contexto cultural.</texto>
       <serie>
-        <subtitulo>Clase de francés</subtitulo>
+        <subtitulo>Una clase de francés</subtitulo>
         <video src-name="public/videos/claseFrances.mp4"/>
       </serie>
       <pelicula>
-        <subtitulo>Cine y lengua francesa</subtitulo>
-        <foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="El cine es una puerta a la cultura francófona"/>
-        <texto>Descubre el francés a través de historias, acentos y culturas.</texto>
+        <subtitulo>Amélie</subtitulo>
+        <foto src-name="public/Amelie.jpg" alt="Cartel de la película Amélie" piefoto="Amélie, una película emblemática del cine francés contemporáneo"/>
+        <texto>Una recomendación para acercarse al francés a través de una historia ambientada en París.</texto>
       </pelicula>
       <podcast>
-        <subtitulo>Escucha y practica</subtitulo>
-        <foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="Práctica de comprensión oral"/>
-        <audio src-name="public/audio/romaPod.mp3"/>
+        <subtitulo>Escuchar Francia</subtitulo>
+        <foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="Una invitación a escuchar y practicar francés"/>
+        <audio src-name="public/audio/himnoFrancia.mp3"/>
       </podcast>
     </multimedia>
-
-    <proyectos>
-      <titulo>Actividades de la Alliance Française</titulo>
-      <proyecto>
-        <subtitulo>Cursos para todos los niveles</subtitulo>
-        <texto>Grupos adaptados a quienes empiezan, refuerzan sus conocimientos o quieren perfeccionar su expresión en francés.</texto>
-        <boton onAction="https://www.alliancefr.org/">Más información</boton>
-      </proyecto>
-      <proyecto>
-        <subtitulo>Club de conversación</subtitulo>
-        <texto>Un encuentro para hablar en francés de forma relajada y ganar fluidez junto a otras personas.</texto>
-        <boton onAction="https://www.alliancefr.org/">Descubrir actividades</boton>
-      </proyecto>
-    </proyectos>
   </pagina>
 </web>
