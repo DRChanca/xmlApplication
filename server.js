@@ -8,7 +8,7 @@ const {
   statSync,
   writeFileSync,
 } = require("node:fs");
-const { extname, join, resolve } = require("node:path");
+const { extname, join, resolve, sep } = require("node:path");
 const { XMLValidator } = require("fast-xml-parser");
 
 const ROOT = __dirname;
@@ -127,7 +127,7 @@ function serveFormFile(res, pathname) {
   if (!["index.html", "form.css", "form.js"].includes(fileName)) return false;
 
   const file = resolve(FORM_DIRECTORY, fileName);
-  if (!file.startsWith(`${FORM_DIRECTORY}\\`) || !existsSync(file)) return false;
+  if (!file.startsWith(`${FORM_DIRECTORY}${sep}`) || !existsSync(file)) return false;
   const contentType = fileName.endsWith(".css")
     ? "text/css; charset=utf-8"
     : fileName.endsWith(".js")
@@ -159,7 +159,7 @@ function serveGeneratedFile(req, res, pathname) {
 
   const relativePath = decodeURIComponent(pathname.slice("/generado/".length));
   let file = resolve(GENERATED_DIRECTORY, relativePath);
-  if (!file.startsWith(`${GENERATED_DIRECTORY}\\`) || !existsSync(file)) return false;
+  if (!file.startsWith(`${GENERATED_DIRECTORY}${sep}`) || !existsSync(file)) return false;
 
   if (statSync(file).isDirectory()) {
     if (!pathname.endsWith("/")) {

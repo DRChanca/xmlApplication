@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web SYSTEM "web.dtd">
+<web xmlns="http://tempuri.org/web"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://tempuri.org/web web.xsd"
+     titulo="Portfolio de Clara Montes">
+  <foto src-name="logo.svg" alt="Logotipo del portfolio de Clara Montes" piefoto="Logotipo"/>
+  <pagina nombre="Portfolio de Clara Montes">
+    <navegacion>
+      <enlace-nav seccion="principal" titulo="El estudio"/>
+      <enlace-nav seccion="sobremi" titulo="Mi recorrido"/>
+      <enlace-nav seccion="proyectos" titulo="Laboratorio"/>
+    </navegacion>
+    <principal>
+      <foto src-name="public/IMG_9.jpeg" alt="Retrato de Clara Montes" piefoto="Clara Montes"/>
+      <titulo>Hola, soy Clasdfasdfasdfara</titulo>
+      <texto>Soy diseñadora de experiencias digitales y me gusta convertir ideas complejas en interfaces claras, útiles y cercanas.</texto>
+      <boton onAction="https://example.com/clara-montes">Conocer mi trabajo</boton>
+      <tecnologia><foto src-name="public/React-icon.svg.png" alt="React" piefoto="React"/><texto>React</texto></tecnologia>
+      <tecnologia><foto src-name="public/css.png" alt="CSS" piefoto="CSS"/><texto>CSS</texto></tecnologia>
+      <tecnologia><foto src-name="public/JavaScript-logo.png" alt="JavaScript" piefoto="JavaScript"/><texto>JavaScript</texto></tecnologia>
+    </principal>
+    <sobremi>
+      <titulo>Diseñar para que todo encaje</titulo>
+      <parrafo>
+        <subtitulo>De la curiosidad a la pantalla</subtitulo>
+        <texto>Empecé creando pequeños carteles para actividades culturales y terminé especializándome en productos digitales.</texto>
+        <subtitulo>Mi forma de trabajar</subtitulo>
+        <texto>Escucho primero, prototipo pronto y pruebo cada decisión con personas reales.</texto>
+      </parrafo>
+      <aficiones>
+        <parrafo><subtitulo>Fuera del estudio</subtitulo><texto>Encuentro ideas nuevas caminando, haciendo fotografías y descubriendo librerías de barrio.</texto></parrafo>
+        <carrusel>
+          <foto src-name="public/camino_santiago.jpeg" alt="Camino entre montañas" piefoto="Caminar para observar"/>
+          <foto src-name="public/los_albos.jpeg" alt="Paisaje de montaña" piefoto="Paisajes que inspiran"/>
+        </carrusel>
+      </aficiones>
+    </sobremi>
+    <contacto>
+      <email>clara.montes@example.com</email>
+      <enlace>https://example.com/clara-montes</enlace>
+    </contacto>
+    <multimedia>
+      <titulo>Notas para inspirarse</titulo>
+      <texto>Una pequeña selección de contenidos que vuelvo a visitar cuando necesito cambiar de perspectiva.</texto>
+      <serie><subtitulo>Historias visuales</subtitulo><video src-name="public/videos/videoplayback.mp4"/></serie>
+      <pelicula><subtitulo>La creatividad cotidiana</subtitulo><foto src-name="public/gif/LOTR.gif" alt="Fotograma de una película" piefoto="Una referencia visual"/></pelicula>
+      <podcast><subtitulo>Conversaciones lentas</subtitulo><foto src-name="public/romAeterna.jpg" alt="Portada de podcast" piefoto="Un podcast para pasear"/><audio src-name="public/audio/romaPod.mp3"/></podcast>
+    </multimedia>
+    <proyectos>
+      <titulo>Experimentos recientes</titulo>
+      <proyecto><subtitulo>Mapa de barrio</subtitulo><texto>Un prototipo colaborativo para encontrar comercios, rutas accesibles y actividades locales.</texto><boton onAction="https://example.com/mapa-barrio">Ver caso</boton></proyecto>
+      <proyecto><subtitulo>Cuaderno de lectura</subtitulo><texto>Una herramienta personal para guardar citas, enlazar ideas y compartir recomendaciones.</texto><boton onAction="https://example.com/cuaderno">Explorar proyecto</boton></proyecto>
+    </proyectos>
+  </pagina>
+</web>
