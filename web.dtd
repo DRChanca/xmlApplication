@@ -1,0 +1,55 @@
+<!ELEMENT web (foto?, pagina+)>
+<!ELEMENT pagina (navegacion?, principal, sobremi?, contacto?, multimedia?, proyectos?)>
+<!ELEMENT navegacion (enlace-nav+)>
+<!ELEMENT enlace-nav EMPTY>
+
+
+<!ELEMENT principal (foto, titulo, texto, boton*, tecnologia*)>
+
+<!ELEMENT sobremi (titulo, parrafo, aficiones)>
+
+<!ELEMENT contacto (email, numero?, enlace*)>
+
+<!ELEMENT multimedia (titulo, texto, serie+, pelicula+, podcast+)>
+
+<!ELEMENT proyectos (titulo, proyecto*)>
+
+<!ELEMENT componente (parrafo+ , (carrusel|video|audio)* )>
+<!ELEMENT parrafo ((subtitulo*, foto* , texto* , boton*)+)>
+<!ELEMENT proyecto (subtitulo, texto, boton?)>
+<!ELEMENT serie (subtitulo, video)>
+<!ELEMENT pelicula (subtitulo, foto, texto?)>
+<!ELEMENT podcast (subtitulo, foto?, audio)>
+<!ELEMENT tecnologia (foto, texto)>
+<!ELEMENT aficiones (parrafo?, carrusel)>
+<!ELEMENT carrusel (foto, foto+)>
+
+
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT subtitulo  (#PCDATA)>
+<!ELEMENT boton (#PCDATA)>
+<!ELEMENT texto (#PCDATA)>
+<!ELEMENT foto EMPTY>
+<!ELEMENT video EMPTY>
+<!ELEMENT audio EMPTY>
+<!ELEMENT enlace (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+
+
+
+<!ATTLIST boton onAction CDATA #REQUIRED>
+<!ATTLIST foto src-name CDATA #REQUIRED>
+<!ATTLIST video src-name CDATA #REQUIRED>
+<!ATTLIST audio src-name CDATA #REQUIRED>
+
+<!ATTLIST foto alt CDATA #REQUIRED>
+<!ATTLIST foto piefoto CDATA #REQUIRED>
+<!ATTLIST web titulo CDATA #REQUIRED>
+<!ATTLIST web xmlns CDATA #IMPLIED>
+<!ATTLIST web xmlns:xsi CDATA #IMPLIED>
+<!ATTLIST web xsi:schemaLocation CDATA #IMPLIED>
+<!ATTLIST pagina nombre CDATA #REQUIRED>
+<!ATTLIST enlace-nav seccion (principal|sobremi|contacto|multimedia|proyectos) #REQUIRED>
+<!ATTLIST enlace-nav titulo CDATA #REQUIRED>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="uri:xsi" xmlns="http://tempuri.org/web" elementFormDefault="qualified" targetNamespace="http://tempuri.org/web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="uri:xsi" />
+	<xs:element name="web">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="1" ref="foto" />
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="pagina" />
+			</xs:sequence>
+			<xs:attribute name="titulo" type="xs:string" use="required" />
+			<xs:attribute ref="xsi:schemaLocation" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pagina">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="1" ref="navegacion" />
+				<xs:element ref="principal" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="sobremi" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="contacto" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="multimedia" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="proyectos" />
+			</xs:sequence>
+			<xs:attribute name="nombre" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="navegacion">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="enlace-nav" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="enlace-nav">
+		<xs:complexType>
+			<xs:attribute name="seccion" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:NMTOKEN">
+						<xs:enumeration value="principal" />
+						<xs:enumeration value="sobremi" />
+						<xs:enumeration value="contacto" />
+						<xs:enumeration value="multimedia" />
+						<xs:enumeration value="proyectos" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="titulo" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="principal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="foto" />
+				<xs:element ref="titulo" />
+				<xs:element ref="texto" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="boton" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="tecnologia" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="sobremi">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="titulo" />
+				<xs:element ref="parrafo" />
+				<xs:element ref="aficiones" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="contacto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="email" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="numero" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="enlace" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="multimedia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="titulo" />
+				<xs:element ref="texto" />
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="serie" />
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="pelicula" />
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="podcast" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="proyectos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="titulo" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="proyecto" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="componente">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="parrafo" />
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element ref="carrusel" />
+					<xs:element ref="video" />
+					<xs:element ref="audio" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="parrafo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:sequence minOccurs="1" maxOccurs="unbounded">
+					<xs:element minOccurs="0" maxOccurs="unbounded" ref="subtitulo" />
+					<xs:element minOccurs="0" maxOccurs="unbounded" ref="foto" />
+					<xs:element minOccurs="0" maxOccurs="unbounded" ref="texto" />
+					<xs:element minOccurs="0" maxOccurs="unbounded" ref="boton" />
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="proyecto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="subtitulo" />
+				<xs:element ref="texto" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="boton" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="serie">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="subtitulo" />
+				<xs:element ref="video" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pelicula">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="subtitulo" />
+				<xs:element ref="foto" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="texto" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="podcast">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="subtitulo" />
+				<xs:element minOccurs="0" maxOccurs="1" ref="foto" />
+				<xs:element ref="audio" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="tecnologia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="foto" />
+				<xs:element ref="texto" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="aficiones">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="1" ref="parrafo" />
+				<xs:element ref="carrusel" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="carrusel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="foto" />
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="foto" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="titulo" type="xs:string" />
+	<xs:element name="subtitulo" type="xs:string" />
+	<xs:element name="boton">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="onAction" type="xs:string" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="texto" type="xs:string" />
+	<xs:element name="foto">
+		<xs:complexType>
+			<xs:attribute name="src-name" type="xs:string" use="required" />
+			<xs:attribute name="alt" type="xs:string" use="required" />
+			<xs:attribute name="piefoto" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="video">
+		<xs:complexType>
+			<xs:attribute name="src-name" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="audio">
+		<xs:complexType>
+			<xs:attribute name="src-name" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="enlace" type="xs:string" />
+	<xs:element name="email" type="xs:string" />
+	<xs:element name="numero" type="xs:string" />
+</xs:schema>

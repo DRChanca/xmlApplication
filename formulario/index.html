@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generador de portfolios XML</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <main>
+    <h1>Generador de portfolios XML</h1>
+    <p>Selecciona un archivo XML para validarlo con WebAssembly y generar la web estática.</p>
+    <form enctype="multipart/form-data">
+      <label>Archivo XML
+        <input name="xml" type="file" accept=".xml,application/xml,text/xml" required>
+      </label>
+      <fieldset>
+        <legend>Acciones</legend>
+        <button name="action" value="validate" type="submit">Validar XML</button>
+        <button name="action" value="generate" type="submit">Generar web</button>
+      </fieldset>
+      <output role="status" aria-live="polite"></output>
+    </form>
+  </main>
+  <script src="form.js"></script>
+</body>
+</html>
