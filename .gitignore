@@ -1,6 +1,2 @@
 node_modules/
 dist/
-generado/
-creados/
-wasm-validator/target/
-verificacion-web/
