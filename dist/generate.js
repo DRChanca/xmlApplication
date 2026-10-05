@@ -87,16 +87,14 @@ function renderIndex(principal, siteTitle, navigation) {
     const skills = asArray(principal.tecnologia)
         .map((technology) => {
         const icon = image(technology.foto);
-        return `<article class="skill-item"><img src="${escapeHtml(icon.src)}" alt="${escapeHtml(icon.alt)}"><h6>${escapeHtml(text(technology.texto))}</h6></article>`;
+        return `<article><img src="${escapeHtml(icon.src)}" alt="${escapeHtml(icon.alt)}"><h3>${escapeHtml(text(technology.texto))}</h3></article>`;
     })
         .join("\n        ");
     const skillsSection = skills
-        ? `<main class="skills-section">
-    <h1>¿Con qué he trabajado?</h1>
-    <section>
-      <h3>Estas son algunas de las tecnologías con las que he trabajado:</h3>
-      ${skills}
-    </section>
+        ? `<main>
+    <h1>Stack tecnológico</h1>
+    <h2>Estas son algunas de las tecnologías con las que he trabajado:</h2>
+    ${skills}
   </main>`
         : "";
     const body = `<header>
@@ -138,6 +136,7 @@ function renderAbout(sobreMi, siteTitle, navigation) {
   <main>
     ${hobbyIntro}
     <section class="carousel-viewport">
+      <h2>Galería de mis aventuras</h2>
       <div class="carousel-slide">${slides}</div>
       <button id="prevBtn" class="carousel-btn" type="button" aria-label="Imagen anterior">❮</button>
       <button id="nextBtn" class="carousel-btn" type="button" aria-label="Imagen siguiente">❯</button>
@@ -179,7 +178,7 @@ function renderMultimedia(multimedia, siteTitle, navigation) {
         return `<article><h3>${escapeHtml(text(podcast.subtitulo))}</h3>${photo ? `<figure><img src="${escapeHtml(photo.src)}" alt="${escapeHtml(photo.alt)}"><figcaption>${escapeHtml(photo.caption)}</figcaption></figure>` : ""}<audio controls src="${escapeHtml(audio)}"></audio></article>`;
     })
         .join("\n      ");
-    const body = `<header><h3>${escapeHtml(text(multimedia.titulo))}</h3><p>${escapeHtml(text(multimedia.texto))}</p><hr></header>
+    const body = `<header><h1>${escapeHtml(text(multimedia.titulo))}</h1><p>${escapeHtml(text(multimedia.texto))}</p><h2>Aquí van las recomendaciones</h2><hr></header>
   ${series}
   <section><h3>Películas recomendadas</h3><hr><div>${films}</div></section>
   <section><h3>Podcast</h3><hr><div>${podcasts}</div></section>`;

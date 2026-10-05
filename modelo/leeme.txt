@@ -1,0 +1,40 @@
+Sitio Web Personal
+
+Descripción
+-----------
+Este trabajo consiste en un portfolio personal estático y multipágina. Presenta
+información profesional y académica, vías de contacto, proyectos y contenido
+multimedia recomendado.
+
+Tecnologías y justificación de su elección
+------------------------------------------
+- HTML5: se emplea para estructurar semánticamente las páginas, la navegación,
+  los textos, las imágenes y los reproductores de audio y vídeo.
+- CSS3: se utiliza en `main.css` para el diseño visual, la adaptación a distintos
+  tamaños de pantalla y la presentación del carrusel.
+- JavaScript estándar se usa en `main.js` para dotar de interactividad al
+  carrusel de la página «Sobre mí».
+
+La elección de estas tecnologías responde a que ya disponía de un trabajo de
+características parecidas realizado únicamente con HTML, CSS y JavaScript.
+
+Estructura del proyecto
+-----------------------
+- `index.html`: página de inicio del portfolio.
+- `sobre-mi.html`: presentación personal, aficiones y carrusel de imágenes.
+- `contacto.html`: datos y enlaces de contacto.
+- `recomendacionPeliculas.html`: recomendaciones multimedia, con vídeo, imágenes
+  y audio.
+- `proyectos.html`: presentación de proyectos personales.
+- `main.css`: estilos comunes de todas las páginas y del carrusel.
+- `main.js`: lógica del carrusel de imágenes.
+- `logo.svg`: icono mostrado en la pestaña del navegador.
+- `public/`: recursos estáticos usados por el portfolio: imágenes, GIF, audios y
+  vídeos, organizados en sus subcarpetas correspondientes.
+- `leeme.txt`: documentación del trabajo.
+
+.
+
+No se han usado herramientas de compilación ni gestores de paquetes, puesto que
+todos los archivos se sirven directamente como recursos estáticos.
+

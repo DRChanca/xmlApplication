@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web SYSTEM "web.dtd">
+<web xmlns="http://tempuri.org/web"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://tempuri.org/web web.xsd"
+     titulo="Alliance Française · Aprender francés">
+  <foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="Alliance Française"/>
+  <pagina nombre="Alliance Française">
+    <navegacion>
+      <enlace-nav seccion="principal" titulo="Inicio"/>
+      <enlace-nav seccion="multimedia" titulo="Aula y cultura"/>
+      <enlace-nav seccion="contacto" titulo="Contacto" />
+    </navegacion>
+
+    <principal>
+      <foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="Alliance Française"/>
+      <titulo>El francés abre conversaciones</titulo>
+      <texto>Una propuesta para aprender francés de forma práctica y acercarse a las culturas francófonas. Cada clase es una oportunidad para escuchar, hablar, descubrir y compartir nuevas perspectivas.</texto>
+      <boton onAction="https://www.alliancefr.org/">Descubrir Alliance Française</boton>
+    </principal>
+
+    <contacto>
+      <email>allianza@allianza.com</email>
+      <numero>242423234234</numero>
+    </contacto>
+
+    <multimedia>
+      <titulo>Aula y cultura francófona</titulo>
+      <texto>El idioma se aprende usándolo: escuchando voces reales, reconociendo expresiones cotidianas y conectando cada palabra con su contexto cultural.</texto>
+      <serie>
+        <subtitulo>Una clase de francés</subtitulo>
+        <video src-name="public/videos/claseFrances.mp4"/>
+      </serie>
+      <pelicula>
+        <subtitulo>Amélie</subtitulo>
+        <foto src-name="public/Amelie.jpg" alt="Cartel de la película Amélie" piefoto="Amélie, una película emblemática del cine francés contemporáneo"/>
+        <texto>Una recomendación para acercarse al francés a través de una historia ambientada en París.</texto>
+      </pelicula>
+      <podcast>
+        <subtitulo>Escuchar Francia</subtitulo>
+        <foto src-name="public/Alliance.png" alt="Logotipo de Alliance Française" piefoto="Una invitación a escuchar y practicar francés"/>
+        <audio src-name="public/audio/himnoFrancia.mp3"/>
+      </podcast>
+    </multimedia>
+  </pagina>
+</web>

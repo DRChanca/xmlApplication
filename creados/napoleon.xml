@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web SYSTEM "web.dtd">
+<web xmlns="http://tempuri.org/web"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://tempuri.org/web web.xsd"
+     titulo="Francia y Napoleón">
+  <foto src-name="public/banderaFrancia.jpg" alt="Bandera de Francia" piefoto="Francia"/>
+  <pagina nombre="Francia y Napoleón">
+    <navegacion>
+      <enlace-nav seccion="principal" titulo="Inicio"/>
+      <enlace-nav seccion="multimedia" titulo="Multimedia"/>
+    </navegacion>
+
+    <principal>
+      <foto src-name="public/napoleon.jpg" alt="Retrato de Napoleón Bonaparte" piefoto="Napoleón Bonaparte"/>
+      <titulo>Francia: historia, cultura y legado</titulo>
+      <texto>Un recorrido introductorio por la historia de Francia a través de la figura de Napoleón Bonaparte, su época y algunos de sus símbolos culturales.</texto>
+      <boton onAction="https://www.alliancefr.org/">Descubrir la cultura francesa</boton>
+    </principal>
+
+    <multimedia>
+      <titulo>Francia en imágenes y sonido</titulo>
+      <texto>Material audiovisual para acompañar el recorrido por la lengua y la cultura francesa.</texto>
+      <serie>
+        <subtitulo>Clase de francés</subtitulo>
+        <video src-name="public/videos/claseFrances.mp4"/>
+      </serie>
+      <pelicula>
+        <subtitulo>Napoleón y su época</subtitulo>
+        <foto src-name="public/peliculaNapoleon.jpg" alt="Retrato de Napoleón Bonaparte" piefoto="Napoleón Bonaparte"/>
+        <texto>Una imagen para introducir una de las figuras más conocidas de la historia de Francia.</texto>
+      </pelicula>
+      <podcast>
+        <subtitulo>Himno de Francia</subtitulo>
+        <foto src-name="public/banderaFrancia.jpg" alt="Bandera de Francia" piefoto="Bandera tricolor francesa"/>
+        <audio src-name="public/audio/himnoFrancia.mp3"/>
+      </podcast>
+    </multimedia>
+
+  </pagina>
+</web>
